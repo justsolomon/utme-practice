@@ -1,0 +1,431 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Poppins, sans-serif;
+	color: #100c08;
+	margin: 0;
+}
+
+button:focus,
+input:focus,
+a:focus {
+	outline: 0;
+}
+
+.App {
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	top: 30%;
+}
+
+.user-form {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-form p {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.user-form .user-name {
+	width: 100%;
+	margin: 0;
+	height: 2.8rem;
+	border-radius: .5rem;
+	border: 2px solid black;
+	padding: .5rem 1rem;
+	font-size: 1.2rem;
+}
+
+.user-form .error {
+	display: none;
+	font-size: 1rem;
+	margin-top: .2rem;
+	margin-bottom: .1rem;
+	color: red;
+	font-style: italic;
+	position: absolute;
+}
+
+.user-form .error-active {
+	display: block;
+}
+
+.user-form .submit-button {
+	height: 3rem;
+	width: 100%;
+	margin: 1.4rem 0;
+	border-radius: .5rem;
+	border: 1px solid rgb(0, 140, 0);
+	background-color: rgb(0, 140, 0);
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.user-form .submit-button:hover {
+	border: 1px solid rgb(0, 140, 0, .8);
+	background-color: rgb(0, 140, 0, .8);
+}
+
+/* ===========
+	Exam page
+	styles
+=========== */
+
+.subjects {
+	width: 85%;
+	margin: auto;
+}
+
+.greeting {
+	display: flex;
+	justify-content: space-between;
+	background-color: blue;
+	color: #fff;
+	width: 100%;
+	box-shadow: 0px 2px rgba(128, 128, 128, .2);
+	height: 3rem;
+	overflow: hidden;
+	padding: 0 1rem;
+	font-weight: 700;
+}
+
+.greeting-text {
+	margin: auto 0;
+	font-size: 1.2rem;
+}
+
+.close-greeting {
+	font-size: 1.3rem;
+	margin: auto 0;
+}
+
+.instruction,
+.note {
+	margin: 1.5rem 0;
+	font-size: 1.05rem;
+}
+
+.subjects-list {
+	list-style: none;
+	padding: 0;
+}
+
+.subjects-list li {
+	background-color: rgb(0, 0, 0, .5);
+	margin-bottom: 1rem;
+	padding: 1.2rem .8rem;
+	color: #fff;
+	border-radius: .3rem;
+	transition: all .3s;
+	font-size: 1.15rem;
+}
+
+.subjects-list .selected {
+	background-color: rgb(0, 0, 0, .7);
+}
+
+.note span {
+	font-weight: 700;
+}
+
+.start-exam-button {
+	display: block;
+	width: 100%;
+	height: 3rem;
+	border-radius: .4rem;
+	border: 1px solid green;
+	background-color: green;
+	font-size: 1.3rem;
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.start-exam-button:hover {
+	border: 1px solid rgb(0, 140, 0);
+	background-color: rgb(0, 140, 0);
+}
+
+.start-exam-button p {
+	display: inline-block;
+	margin: auto;
+}
+
+.loader-icon {
+	width: 20px;
+	display: none;
+	margin: auto 0 auto .3rem;
+}
+
+/* exam questions styles */
+
+.exam-session {
+	width: 85%;
+	margin: 1.5rem auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header p {
+	margin: auto 0;
+	font-weight: 500;
+}
+
+.header .time p {
+	font-size: 1.05rem;
+	padding: .45rem 0;
+}
+
+.header .time span {
+	font-weight: 600;
+}
+
+.header .active-time {
+	color: red;
+	font-size: 1.5rem;
+}
+
+.selected-subjects {
+	margin-top: 1rem;
+}
+
+.selected-subjects .list {
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	flex-wrap: wrap;
+}
+
+.list .subject {
+	font-size: 1.05rem;
+	letter-spacing: .01rem;
+	border: 1px solid #007bff;
+	color: #007bff;
+	padding: .5rem .65rem;
+	margin: 0 .7rem .5rem 0;
+	border-radius: .3rem;
+	transition: .3s;
+}
+
+.list .current {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.question-boxes-div .boxes-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.boxes-list .question-box {
+	width: 2.5rem;
+	padding: .4rem 0;
+	text-align: center;
+	margin: 0 .5rem .5rem 0;
+	border-radius: .1rem;
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
+
+.boxes-list .question-box:hover {
+	background-color: #f2982b;
+	border: 1px solid #f2982b;
+	color: #fff;
+}
+
+.boxes-list .answered {
+	background-color: #f2982b;
+	border: 1px solid #f2982b;
+	color: #fff;
+}
+
+.current-question {
+	margin-top: .8rem;
+}
+
+.current-question .question {
+	display: flex;
+}
+
+.question div {
+	margin: 0;
+	margin-left: .5rem;
+}
+
+.question .english-section {
+	display: block;
+	font-style: italic;
+	margin-bottom: .5rem;
+}
+
+.question p {
+	margin: 0;
+}
+
+.current-question .options {
+	margin-top: .6rem;
+}
+
+.current-question label {
+	display: block;
+}
+
+.action-buttons {
+	display: flex;
+	margin: .7rem 0;
+}
+
+.action-buttons button {
+	padding: .5rem .8rem;
+	font-size: 1rem;
+	text-align: center;
+	color: #fff;
+	margin-right: .7rem;
+	background-color: rgb(15, 82, 186);
+	border: 1px solid rgb(15, 82, 186);
+	border-radius: .2rem;
+	font-weight: 500;
+}
+
+.action-buttons button:hover {
+	background-color: rgba(15, 82, 186, .7);
+	border: 1px solid rgba(15, 82, 186, .7);
+}
+
+/* ==============
+	Results page
+	styles
+============== */
+
+.results-summary {
+	width: 90%;
+	margin: 1.5rem auto;
+}
+
+.results-summary h1 {
+	font-size: 1.7rem;
+	margin-bottom: 1rem;
+}
+
+.results-summary .summary-title {
+	font-weight: 600;
+}
+
+.results-summary table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.results-summary td,
+.results-summary th {
+	text-align: left;
+}
+
+.score-summary h2 {
+	margin: 0 0 .5rem 0;
+}
+
+.score-percentage div {
+	height: 2rem;
+	border-radius: 1rem;
+}
+
+.score-bar {
+	width: 100%;
+	background-color: #dddddd;
+}
+
+.score-bar-inner {
+	background-color: rgb(0, 145, 255);
+	display: flex;
+}
+
+.score-bar-inner p {
+	margin: auto;
+}
+
+.score-number {
+	font-size: 1.1rem;
+	margin: 1rem 0;
+}
+
+.time-summary {
+	margin: 1rem 0;
+}
+
+.time-summary h3 {
+	margin: 0 0 .3rem 0;
+}
+
+.time-analysis-table td {
+	padding: .5rem;
+}
+
+.time-analysis-table tr:nth-child(odd) {
+	background-color: #e9ecef;
+}
+
+.subject-score-summary {
+	margin: 1.5rem 0;
+}
+
+.subject-score-table {
+	font-size: .85rem;
+}
+
+.subject-score-table td,
+.subject-score-table th {
+	border: 1px solid #dddddd;
+	padding: .8rem .3rem;
+}
+
+.subject-score-table td {
+	text-align: center;
+}
+
+.subject-score-table .table-subject {
+	text-align: left;
+}
+
+.action-buttons .explanation-button,
+.action-buttons .new-exam-button {
+	padding: .65rem .5rem;
+}
+
+.new-exam-button a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* correction styles */
+.answers-div {
+	margin: 1rem 0;
+}
+.answers-div p {
+	margin: 0;
+	font-size: 1.08rem;
+}
+
+.correct-answer {
+	color: #28a745;
+}
+
+.emoji-sign {
+	font-size: .9rem;
+}

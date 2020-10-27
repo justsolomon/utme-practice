@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="results-summary">
+		<h1>Examination Summary/Performance</h1>
+		<div class='score-summary'>
+			<h2>Score</h2>
+
+			<div class='score-percentage'>
+				<div class="score-bar">
+					<div class="score-bar-inner"></div>
+				</div>
+			</div>
+
+			<div class="score-number">
+				<span class="summary-title">JAMB Score:</span>
+				<span class="jamb-score"></span>
+			</div>
+		</div>
+
+		<div class="time-summary">
+			<h3>Time Analysis</h3>
+			<table class="time-analysis-table">
+				<tr>
+					<td>Start Time:</td>
+					<td class="start-time"></td>
+				</tr>
+				<tr>
+					<td>End Time:</td>
+					<td class="end-time"></td>
+				</tr>
+				<tr>
+					<td>Time Spent:</td>
+					<td class="time-spent"></td>
+				</tr>
+				<tr>
+					<td>Time Left:</td>
+					<td class="time-left"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="subject-score-summary">
+			<table class="subject-score-table">
+				<tr>
+					<th>Subjects</th>
+					<th>Total</th>
+					<th>Attempted</th>
+					<th>Passed</th>
+					<th>Failed</th>
+				</tr>
+			</table>	
+		</div>
+
+		<div class="action-buttons">
+			<button class="explanation-button">View Correction</button>
+			<button class="new-exam-button">
+				<a href="exam.html">Start Another Exam</a>
+			</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="resultscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Past Questions</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="App">
+		<div class="form">
+			<form class="user-form">
+				<label for='name'>
+					<p>Please enter your name</p>
+					<input id='name' type='text' class='user-name' />
+					<span class="error">Please enter a valid name</span>
+				</label>
+				<label for='submit'>
+					<button class="submit-button">Get Started</button>
+				</label>
+			</form>
+		</div>
+	</div>
+	<script>
+		if(localStorage['username'] !== undefined) {
+			let greeting = `Welcome back, ${localStorage['username']}`;
+			localStorage['greeting'] = greeting;
+			window.location.assign('exam.html');
+		};
+		const startButton = document.querySelector('.submit-button');
+
+		startButton.addEventListener('click', function(e) {
+			e.preventDefault();
+			const username = document.querySelector('.user-name').value;
+			if (username !== '') {
+				localStorage['username'] = username;
+				let greeting =  `Welcome, ${username}`;
+				localStorage['greeting'] = greeting;
+				window.location.assign('exam.html');
+			} else {
+				document.querySelector('.error').classList.toggle('error-active')
+				setTimeout(function() {
+					document.querySelector('.error').classList.toggle('error-active')
+				}, 3000)
+			}
+		})
+	</script>
+</body>
+</html>
