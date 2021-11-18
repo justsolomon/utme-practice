@@ -218,6 +218,8 @@ function displayAllQuestions() {
 				}
 
 				localStorage['timeInfo'] = JSON.stringify(timeInfo);
+				
+				if (!localStorage['questions']) localStorage['questions'] = JSON.stringify(allQuestions);
 
 				if (window.confirm('Are you sure you want to submit this exam?')) window.location.assign('results.html')
 			})
