@@ -74,11 +74,11 @@ subjects.forEach(subject => {
 // let allQuestions = [];
 
 function getQuestions(subject) {
-	return fetch(`https://questions.aloc.ng/api/v2/q?subject=${subject}`, {
+	return fetch(`https://questions.aloc.ng/api/v2/m?subject=${subject}`, {
        				headers: {
          				'Accept': 'application/json',
          				'Content-Type': 'application/json',
-         				'AccessToken': 'ALOC-e7db7b28842dcfea6a42'
+         				'AccessToken': 'ALOC-78bfe77b49fb3e407bf8'
        				},
        				method: "GET",
    			})
